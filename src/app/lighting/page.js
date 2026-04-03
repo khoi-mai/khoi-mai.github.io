@@ -11,5 +11,5 @@ const lightingProjects = [
 ];
 
 export default function LightingPage() {
-  return <ProjectsList projectList={LightingProjects} />;
+  return <ProjectsList projectList={lightingProjects || []} />;
 }
