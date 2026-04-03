@@ -1,31 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}", // your source files
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
-  darkMode: "class", // use class-based dark mode
   theme: {
     extend: {},
   },
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
-      "light", // keep the default light theme
       {
         customDark: {
-          "primary": "#ffffff",      // white text
-          "secondary": "#a0a0a0",    // gray (unchanged)
-          "accent": "#f0f0f0",       // same accent
-          "neutral": "#1a1a1a",      // darker neutral
-          "base-100": "#000000",     // main background: pitch black
-          "base-200": "#111111",     // slightly lighter black if needed
-          "base-300": "#222222",     // slightly lighter black if needed
+          "primary": "#ffffff",        // white text / main elements
+          "secondary": "#a0a0a0",      // grey stays the same
+          "accent": "#000000",         // black elements
+          "neutral": "#111111",        // black background for cards
+          "base-100": "#000000",       // black background for page
+          "base-200": "#1c1c1c",       // slightly lighter for cards if needed
           "info": "#3abff8",
           "success": "#36d399",
           "warning": "#fbbd23",
           "error": "#f87272",
         },
       },
+      "light",   // keep the default light theme as well
     ],
   },
 };
