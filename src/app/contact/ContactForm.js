@@ -1,63 +1,63 @@
 "use client";
 
-import React from "react";
 import { forms } from "@/data/data";
 
 export default function ContactForm() {
   return (
-    <div className="group p-4 border-2 border-base-content/20 rounded-2xl hover:border-base-content/80 hover:scale-102 transition-transform duration-200 bg-base-100 dark:bg-black">
+    <div className="group p-4 border-2 border-base-content/20 rounded-2xl hover:border-base-content/80 hover:scale-[1.02] transition-all duration-200">
       <form
         action={forms.formspreeUrl}
         method="POST"
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-3"
       >
+        {/* Title (matches project card spacing) */}
+        <h1 className="text-lg font-semibold">Contact Me</h1>
+
         {/* Full Name */}
         <div>
-          <label className="uppercase text-sm text-base-content/80 font-bold">
+          <span className="uppercase text-xs text-base-content/70 font-medium">
             Full Name
-          </label>
+          </span>
           <input
             type="text"
             name="name"
             required
-            className="w-full mt-1 p-3 rounded-lg border border-base-content text-base-content/80 focus:outline-none focus:shadow-outline bg-base-100 dark:bg-black dark:text-white"
+            className="w-full mt-1 p-3 rounded-lg border border-base-content/30 bg-transparent text-base-content focus:outline-none"
           />
         </div>
 
         {/* Email */}
         <div>
-          <label className="uppercase text-sm text-base-content/80 font-bold">
+          <span className="uppercase text-xs text-base-content/70 font-medium">
             Email
-          </label>
+          </span>
           <input
             type="email"
             name="email"
             required
-            className="w-full mt-1 p-3 rounded-lg border border-base-content text-base-content/80 focus:outline-none focus:shadow-outline bg-base-100 dark:bg-black dark:text-white"
+            className="w-full mt-1 p-3 rounded-lg border border-base-content/30 bg-transparent text-base-content focus:outline-none"
           />
         </div>
 
         {/* Message */}
         <div>
-          <label className="uppercase text-sm text-base-content/80 font-bold">
+          <span className="uppercase text-xs text-base-content/70 font-medium">
             Message
-          </label>
+          </span>
           <textarea
             name="message"
             required
-            className="w-full mt-1 p-3 rounded-lg border border-base-content text-base-content/80 focus:outline-none focus:shadow-outline bg-base-100 dark:bg-black dark:text-white"
+            className="w-full mt-1 p-3 rounded-lg border border-base-content/30 bg-transparent text-base-content focus:outline-none"
           />
         </div>
 
-        {/* Submit Button */}
-        <div>
-          <button
-            type="submit"
-            className="uppercase text-sm font-bold tracking-wide bg-base-content text-base-100 p-3 cursor-pointer hover:bg-base-content/95 rounded-lg w-full focus:outline-none focus:shadow-outline"
-          >
-            Send Message
-          </button>
-        </div>
+        {/* Button */}
+        <button
+          type="submit"
+          className="mt-2 text-sm font-semibold bg-base-content text-base-100 py-3 rounded-lg hover:opacity-90 transition"
+        >
+          Send Message
+        </button>
       </form>
     </div>
   );
