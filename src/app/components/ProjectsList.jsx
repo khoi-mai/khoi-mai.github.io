@@ -2,7 +2,7 @@
 
 export default function ProjectsList({ projectList = [], showSeeAll = false }) {
   return (
-    <div className="mt-10 flex flex-col gap-6 max-w-[1200px] mx-auto px-4">
+    <div className="mt-10 flex flex-col gap-4">
       <div className="flex items-end justify-between">
         <h2 className="text-xl font-medium before:content-['>'] before:mr-1">
           Projects
@@ -17,13 +17,13 @@ export default function ProjectsList({ projectList = [], showSeeAll = false }) {
         )}
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         {projectList.map((item, index) => (
           <div
             key={index}
-            className="group p-6 md:p-8 border-2 border-base-content/20 rounded-2xl hover:border-base-content/80 hover:scale-102 transition-transform duration-200"
+            className="group p-4 border-2 border-base-content/20 rounded-2xl hover:border-base-content/80 hover:scale-102 transition-transform duration-200"
           >
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {/* Title + Arrow */}
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
@@ -60,7 +60,7 @@ export default function ProjectsList({ projectList = [], showSeeAll = false }) {
 
               {/* Vimeo Video Embed */}
               {item.videoUrl && (
-                <div className="aspect-video w-full rounded-xl overflow-hidden mt-4">
+                <div className="aspect-video w-full rounded-lg overflow-hidden mt-2">
                   <iframe
                     src={item.videoUrl}
                     title={item.title}
