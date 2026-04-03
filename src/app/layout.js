@@ -23,11 +23,18 @@ export default function RootLayout({ children }) {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
                     rel="stylesheet"
-                ></link>
+                />
             </head>
-            <body className={`antialiased overflow-auto`}>
-                <div className="w-[100%] md:w-[700px] m-auto">
-                    <Navbar />
+            <body className="antialiased overflow-auto">
+                {/* Navbar: sticky at top, offset right, with top margin */}
+                <div className="w-full fixed top-0 z-50 flex justify-end mt-4 pr-4">
+                    <div className="w-[700px]">
+                        <Navbar />
+                    </div>
+                </div>
+
+                {/* Main content container: max width 1200px, centered, with padding */}
+                <div className="max-w-[1200px] mx-auto px-4 mt-24">
                     {children}
                 </div>
             </body>
