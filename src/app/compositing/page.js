@@ -17,5 +17,5 @@ const compositingProjects = [
 ];
 
 export default function CompositingPage() {
-  return <ProjectsList projectList={CompositingProjects || []} />;
+  return <ProjectsList projectList={compositingProjects || []} />;
 }
