@@ -1,8 +1,8 @@
 export const about = {
-    name: "Your Name",
-    role: "Your Profession",
-    about: "A minimal, clean portfolio template built with Next.js. Perfect for developers who want a simple yet professional online presence without the complexity.",
-    email: "your.email@example.com",
+    name: "Khoi Mai",
+    role: "2D & 3D Artist",
+    about: "BAA: Animation, Sheridan College, 2013 ● 10+ years industry experience ● compositing, lighting, rigging",
+    email: "khoi.m1204@gmail.com",
 };
 
 export const seo = {
@@ -15,20 +15,20 @@ export const forms = {
     formspreeUrl: "https://formspree.io/f/<url>",
 }
 
-export const skills = [
-    { name: "Html", alt: "html logo", icon: "/html.svg" },
-    { name: "Css", alt: "css logo", icon: "/css.svg" },
-    { name: "Js", alt: "js logo", icon: "/js.svg" },
-    { name: "Tailwind", alt: "tailwind logo", icon: "/tailwind.svg" },
-    { name: "React Js", alt: "react logo", icon: "/react.svg" },
-    { name: "Next Js", alt: "nextjs logo", icon: "/nextjs.svg" },
+export const tools = [
+  { name: "Nuke", icon: "/tools/nuke.svg", alt: "Nuke" },
+  { name: "Fusion", icon: "/tools/fusion.svg", alt: "Fusion" },
+  { name: "After Effects", icon: "/tools/aftereffects.svg", alt: "After Effects" },
+  { name: "Harmony", icon: "/tools/harmony.svg", alt: "Harmony" },
+  { name: "Maya", icon: "/tools/maya.svg", alt: "Maya" },
+  { name: "Katana", icon: "/tools/katana.svg", alt: "Katana" },
+  { name: "Photoshop", icon: "/tools/photoshop.svg", alt: "Photoshop" },
 ];
 
 export const socials = {
-    github: "https://github.com/sachinbhujel",
-    twitter: "https://twitter.com/sachinbhujel909",
-    instagram: "https://www.instagram.com/imsachinbhujel",
-    facebook: "https://www.facebook.com/imsachinbhujel",
+    linkedin: "https://www.linkedin.com/in/khoimai/",
+    imdb: "https://www.imdb.com/name/nm7554756/",
+    vimeo: "https://vimeo.com/khoimai",
 };
 
 export const projects = {
