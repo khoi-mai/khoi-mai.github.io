@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-[700px] w-full mx-auto mt-5 px-4">
+    <div className="max-w-[700px] mx-auto mt-5 px-4">
       <ContactForm />
     </div>
   );
