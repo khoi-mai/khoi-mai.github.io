@@ -1,4 +1,4 @@
-// src/app/layout.js or layout.tsx
+// src/app/layout.js
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { seo } from "@/data/data";
@@ -11,11 +11,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // Default to dark so first paint isn't white
-  // We'll hydrate the actual theme on client side with Navbar
   return (
     <html lang="en" data-scroll-behavior="smooth" data-theme="customDark">
       <head>
+        {/* Inline script to apply saved theme immediately */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const saved = localStorage.getItem('theme');
+                if(saved) {
+                  document.documentElement.setAttribute('data-theme', saved);
+                }
+              })();
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -27,12 +38,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="antialiased overflow-auto">
+        {/* Navbar */}
         <div className="w-full fixed top-0 z-50 flex justify-end mt-4 pr-4">
           <div className="w-[700px]">
             <Navbar />
           </div>
         </div>
 
+        {/* Main content */}
         <div className="max-w-[1200px] mx-auto px-4 mt-24">{children}</div>
       </body>
     </html>
