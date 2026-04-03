@@ -1,27 +1,20 @@
+// src/app/layout.js or layout.tsx
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { seo } from "@/data/data";
 
 export const metadata = {
   title: `${seo.title}`,
-  icons: {
-    icon: [{ url: "/favicon.ico" }],
-  },
+  icons: { icon: [{ url: "/favicon.ico" }] },
   description: `${seo.description}`,
   keywords: `${seo.keywords}`,
 };
 
 export default function RootLayout({ children }) {
-  // Load saved theme from localStorage or fallback to system preference
-  const defaultTheme = typeof window !== "undefined"
-    ? localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "customDark"
-        : "light")
-    : "light";
-
+  // Default to dark so first paint isn't white
+  // We'll hydrate the actual theme on client side with Navbar
   return (
-    <html lang="en" data-theme={defaultTheme} data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" data-theme="customDark">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -34,14 +27,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="antialiased overflow-auto">
-        {/* Navbar: sticky at top, offset right, with top margin */}
         <div className="w-full fixed top-0 z-50 flex justify-end mt-4 pr-4">
           <div className="w-[700px]">
             <Navbar />
           </div>
         </div>
 
-        {/* Main content container: max width 1200px, centered, with padding */}
         <div className="max-w-[1200px] mx-auto px-4 mt-24">{children}</div>
       </body>
     </html>
