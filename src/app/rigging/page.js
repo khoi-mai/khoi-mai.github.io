@@ -11,5 +11,5 @@ const riggingProjects = [
 ];
 
 export default function RiggingPage() {
-  return <ProjectsList projectList={RiggingProjects} />;
+  return <ProjectsList projectList={RiggingProjects || []} />;
 }
