@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
@@ -12,19 +12,21 @@ module.exports = {
     themes: [
       {
         customDark: {
-          "primary": "#ffffff",        // white text / main elements
-          "secondary": "#a0a0a0",      // grey stays the same
-          "accent": "#000000",         // black elements/buttons
-          "neutral": "#111111",        // background for cards
-          "base-100": "#000000",       // main page background
-          "base-200": "#1c1c1c",       // card backgrounds / subtle contrast
-          "info": "#3abff8",
-          "success": "#36d399",
-          "warning": "#fbbd23",
-          "error": "#f87272",
+          "primary": "#ffffff",        // text / accent
+          "secondary": "#999999",      // secondary text / accents
+          "accent": "#ffffff",
+          "neutral": "#1a1a1a",
+          "base-100": "#000000",       // page background → pitch black
+          "base-200": "#111111",       // slightly lighter backgrounds
+          "base-300": "#222222",       // cards / panels
+          "info": "#2094f3",
+          "success": "#009485",
+          "warning": "#ff9900",
+          "error": "#ff5724",
+          "base-content": "#ffffff",   // text color
         },
       },
-      "light",   // keep your default light theme
+      "light",
     ],
   },
 };
